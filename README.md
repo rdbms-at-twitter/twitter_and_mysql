@@ -1,4 +1,4 @@
-[Purpose of this shell]
+[Purpose of this shell]<br>
 Gather data from twitter for Analyzing trend.<br>
 
 Pre-Require:<br>
@@ -7,22 +7,17 @@ pip install requests-oauthlib <br>
 pip install mysql-connector-python <br>
 
 
-1) Create Table
-This script generated on the MySQL8.0.11 (With mecab plugin)
+<B>1) Create Table</B> <br>
+This script generated on the MySQL8.0.11 (With mecab plugin) <br>
+This sample use "APP" as target database.
 
-CREATE TABLE `T_Tweets` (
-  `tweet_id` bigint(20) NOT NULL,
-  `user` varchar(512) DEFAULT NULL,
-  `text` varchar(4096) DEFAULT NULL,
-  PRIMARY KEY (`tweet_id`),
-  FULLTEXT KEY `idx_mecab_text` (`text`) /*!50100 WITH PARSER `mecab` */ 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+T_Tweets.sql <br>
 
+<B>2) Create Shell and Modify it.</B><br>
 
-2) Create Shell and Modify it.
+  tweet_import.py <br>
 
-
-3) Run Shell Periodically.
+<B>3) Run Shell Periodically.</B><br>
 
 crontab -u root -e
 */10 * * * * /home/user/shell/tweet.sh
