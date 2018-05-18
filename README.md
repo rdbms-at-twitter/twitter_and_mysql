@@ -1,4 +1,4 @@
-[Purpose of this shell]<br>
+<B>[Purpose of this shell]</B><br>
 Gather data from twitter for Analyzing trend.<br>
 
 Pre-Require:<br>
